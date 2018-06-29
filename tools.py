@@ -71,7 +71,8 @@ def create_sim(input_file, output_file):
 
 
 ''' Create a histogram for GC or SV length data '''
-def create_hist(input_file, output_file, ref_dict, type):
+def create_hist(input_file, output_file, reference, type):
+    ref_dict = dict_from_ref(reference)
     reader = get_reader(input_file)
     if type not in ['GC', 'Length', 'gc', 'length']:
         raise ValueError("Type must be 'gc' or 'length'")
@@ -89,9 +90,3 @@ def create_hist(input_file, output_file, ref_dict, type):
     plt.hist(data, bins='auto')
     plt.title(type +  ' Content Histogram')
     plt.savefig(output_file)
-
-
-
-if __name__ == '__main__':
-    reference = sys.argv[1]
-    sv_file = sys.argv[2]
