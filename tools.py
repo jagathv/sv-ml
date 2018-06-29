@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from Bio import SeqIO
 import allel
 
-num_variants = 0
+
 
 ''' Get GC content of a sequence '''
 def gc_content(seq):
@@ -91,8 +91,7 @@ def create_hist(input_file, ref_dict, type):
     plt.savefig("histogram.png")
 
 
-''' Print GC content of each SV '''
+
 if __name__ == '__main__':
-    # reference = sys.argv[1]
-    sv_file = sys.argv[1]
-    create_sim(sv_file, 'new_sim.sim')
+    reference = sys.argv[1]
+    sv_file = sys.argv[2]
