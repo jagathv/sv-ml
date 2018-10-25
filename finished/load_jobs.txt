@@ -1,4 +1,0 @@
-sbatch 1kgbdel_matrix.tsv_load.sh
-sbatch 1kgbdup_matrix.tsv_load.sh
-sbatch cbdup_matrix.tsv_load.sh
-sbatch cbinv_matrix.tsv_load.sh
